@@ -1,0 +1,47 @@
+#tell-us-main {
+    width: 75%;
+    margin: 80px auto 80px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#header {
+    margin-right: 40px;
+}
+#contacts {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-width: 570px;
+    border-radius: 10px;
+}
+.inputs {
+    height: 60px;
+    padding-left: 10px;
+    margin: 24px 24px 16px 24px;
+    background-color: #F9F9F9;
+    border: 0px;
+    border-radius: 8px;
+}
+#check {
+    color: #061034;
+    margin: 24px;
+}
+#label {
+    margin-left: 10px;
+}
+#send {
+    margin-top: 18px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    width: 180px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #364AFA;
+    color: #FFFFFF;
+}
+#header-text {
+    font-size: 40px;
+    text-align: start;
+    margin-bottom: 40px;
+}

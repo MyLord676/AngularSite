@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { RequestsService } from './requests.service';
+import { TellUsComponent } from './tell-us/tell-us.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RequestsService } from './requests.service';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
+    TellUsComponent,
   ],
   imports: [
     BrowserModule,

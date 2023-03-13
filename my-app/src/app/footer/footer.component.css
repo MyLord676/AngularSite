@@ -2,7 +2,6 @@ footer {
   width: 75%;
   margin: 0px auto 80px;
   color: white;
-  
 }
 #footer-menu {
   display: flex;
@@ -19,5 +18,4 @@ footer {
   display: flex;
   justify-content: space-between;
   color: #8D93A3;
-
 }
