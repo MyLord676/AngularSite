@@ -1,6 +1,8 @@
 footer {
   width: 75%;
-  margin: 0px auto 0px;
+  margin: 0px auto 80px;
+  color: white;
+  
 }
 #footer-menu {
   display: flex;
@@ -11,6 +13,11 @@ footer {
   width: 131px;
 }
 .footer-topic {
-  color: white;
   margin: 61px 0px;
+}
+#footer-policy {
+  display: flex;
+  justify-content: space-between;
+  color: #8D93A3;
+
 }
