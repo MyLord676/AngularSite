@@ -1,12 +1,16 @@
 footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-    justify-content: center
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }
+  width: 75%;
+  margin: 0px auto 0px;
+}
+#footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+#footer-istok-logo {
+  height: 60px;
+  width: 131px;
+}
+.footer-topic {
+  color: white;
+  margin: 61px 0px;
+}
