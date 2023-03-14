@@ -13,6 +13,7 @@ export class SliderComponent implements OnInit {
   @Input() controls = true;
   selectedImage = 0;
   @ViewChild("dotsContainer")dotsContainer!: ElementRef<HTMLDivElement>;
+  @ViewChild("controls")controlsContainer!: ElementRef<HTMLDivElement>;
   
   ngOnInit(): void {
     //setInterval(() => {console.log("interval")}, 3000);
@@ -23,7 +24,7 @@ export class SliderComponent implements OnInit {
     this.selectedImage = index;
   }
   onResized(event: ResizedEvent) {
-    let height = event.newRect.height / 10;
-    this.dotsContainer.nativeElement.style.bottom = height.toString() + "px";
+    this.dotsContainer.nativeElement.style.bottom = (event.newRect.height / 10).toString() + "px";
+    this.controlsContainer.nativeElement.style.bottom = (event.newRect.height / 2).toString() + "px";
   }
 }
