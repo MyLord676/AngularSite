@@ -68,3 +68,6 @@
 .arrow {
     fill: white;
 }
+.arrow:hover {
+    cursor: pointer;
+}

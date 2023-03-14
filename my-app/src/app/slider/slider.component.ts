@@ -27,4 +27,18 @@ export class SliderComponent implements OnInit {
     this.dotsContainer.nativeElement.style.bottom = (event.newRect.height / 10).toString() + "px";
     this.controlsContainer.nativeElement.style.bottom = (event.newRect.height / 2).toString() + "px";
   }
+  onRightClick() {
+    if (this.selectedImage < this.images.length - 1)
+      this.selectedImage = this.selectedImage + 1;
+    else
+      this.selectedImage = 0;
+    console.log("Right");
+  }
+  onLeftClick() {
+    if (this.selectedImage > 0)
+      this.selectedImage = this.selectedImage - 1;
+    else
+      this.selectedImage = this.images.length - 1;
+    console.log("Left");
+  }
 }
