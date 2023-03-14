@@ -10,7 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { RequestsService } from './requests.service';
 import { TellUsComponent } from './tell-us/tell-us.component';
 import { SliderComponent } from './slider/slider.component';
-
+import { AngularResizeEventModule } from 'angular-resize-event';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { SliderComponent } from './slider/slider.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    AngularResizeEventModule,
   ],
   providers: [RequestsService],
   bootstrap: [AppComponent]

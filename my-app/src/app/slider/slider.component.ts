@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
   selector: 'app-slider',
@@ -19,5 +20,8 @@ export class SliderComponent implements OnInit {
 
   selectImage(index: number) {
     this.selectedImage = index;
+  }
+  onResized() {
+    console.log("resize");
   }
 }

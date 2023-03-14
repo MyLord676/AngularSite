@@ -1,4 +1,4 @@
-<div *ngIf="images && images.length > 0" class="slider">
+<div *ngIf="images && images.length > 0" class="slider" (resized)="onResized()">
     <img *ngFor="let image of images; let i = index"
      [src]="image"
      [ngClass]="{'image-active': selectedImage === i}"
