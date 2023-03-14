@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { ResizedEvent } from 'angular-resize-event';
 
@@ -12,6 +12,7 @@ export class SliderComponent implements OnInit {
   @Input() dots = true;
   @Input() controls = true;
   selectedImage = 0;
+  @ViewChild("dotsContainer")dotsContainer!: ElementRef<HTMLDivElement>;
   
   ngOnInit(): void {
     //setInterval(() => {console.log("interval")}, 3000);
@@ -21,7 +22,8 @@ export class SliderComponent implements OnInit {
   selectImage(index: number) {
     this.selectedImage = index;
   }
-  onResized() {
-    console.log("resize");
+  onResized(event: ResizedEvent) {
+    let height = event.newRect.height / 10;
+    this.dotsContainer.nativeElement.style.bottom = height.toString() + "px";
   }
 }

@@ -32,7 +32,7 @@
     }
 }
 
-.dots-container {
+#dots-container {
     position: relative;
     display: flex;
     justify-content: center;

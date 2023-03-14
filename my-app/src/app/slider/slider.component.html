@@ -1,10 +1,10 @@
-<div *ngIf="images && images.length > 0" class="slider" (resized)="onResized()">
+<div *ngIf="images && images.length > 0" class="slider" (resized)="onResized($event)">
     <img *ngFor="let image of images; let i = index"
      [src]="image"
      [ngClass]="{'image-active': selectedImage === i}"
      class="fade">
 
-    <div *ngIf="dots" class="dots-container">
+    <div *ngIf="dots" id="dots-container" #dotsContainer>
         <span *ngFor="let dot of images; let i = index" 
         class="dot" 
         [ngClass]="{'dot-active': selectedImage === i}"
