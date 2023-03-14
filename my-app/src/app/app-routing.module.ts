@@ -6,7 +6,6 @@ import { ContentComponent } from './content/content.component';
 
 const routes: Routes = [
   {path: '', component:ContentComponent},
-  //{path: 'date', component:DateComponent},
   {path: '**', redirectTo: '/'}
 ]
 

@@ -15,6 +15,9 @@ app-tell-us {
     width: 133.33333%;
     background-color: #364AFA;
 }
+app-slider {
+    width: 100%;
+}
 #wrapper {
     max-width: 1200px;
     display: flex;

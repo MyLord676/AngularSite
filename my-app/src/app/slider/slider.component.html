@@ -1,0 +1,24 @@
+<div *ngIf="images && images.length > 0" class="slider">
+    <img *ngFor="let image of images; let i = index"
+     [src]="image"
+     [ngClass]="{'image-active': selectedImage === i}"
+     class="fade">
+
+    <div *ngIf="dots" class="dots-container">
+        <span *ngFor="let dot of images; let i = index" 
+        class="dot" 
+        [ngClass]="{'dot-active': selectedImage === i}"
+        (click)="selectImage(i)">
+        </span>
+    </div>
+
+    <div *ngIf="controls" class="controls">
+        <svg class="arrow" id="right" width="40" height="18" viewBox="0 0 40 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M36.8693 8.30331L30.5184 1.88094L31.6015 0.785706L39.7243 8.99999L31.6015 17.2143L30.5184 16.119L36.7155 9.85221L0.426758 9.85222V8.30332L36.8693 8.30331Z" fill="#282828"/>
+        </svg>
+        
+        <svg class="arrow" id="left" width="40" height="18" viewBox="0 0 40 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.12971 9.69669L9.4806 16.1191L8.39755 17.2143L0.274689 9.00001L8.39755 0.785725L9.4806 1.88096L3.28353 8.14779L39.5723 8.14778V9.69668L3.12971 9.69669Z" fill="#282828"/>
+        </svg>            
+    </div>
+</div>

@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { RequestsService } from './requests.service';
 import { TellUsComponent } from './tell-us/tell-us.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TellUsComponent } from './tell-us/tell-us.component';
     FooterComponent,
     ContentComponent,
     TellUsComponent,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

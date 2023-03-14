@@ -1,0 +1,74 @@
+.slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+    display: none;
+}
+
+.slider img.image-active {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dots-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 0px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
+}
+
+.dot-active,
+.dot:hover {
+    opacity: 1;
+}
+
+.controls{
+    position: relative;
+    height: 0px;
+}
+
+.arrow {
+    
+}
+
+#left {
+
+}
+
+#right {
+
+}
