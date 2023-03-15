@@ -19,6 +19,9 @@ app-tell-us {
 app-slider {
     width: 75%;
 }
+app-circle-slider {
+    width: 75%;
+}
 #wrapper {
     max-width: 1600px;
     min-width: 1200px;

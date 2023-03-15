@@ -11,6 +11,7 @@ import { RequestsService } from './requests.service';
 import { TellUsComponent } from './tell-us/tell-us.component';
 import { SliderComponent } from './slider/slider.component';
 import { AngularResizeEventModule } from 'angular-resize-event';
+import { CircleSliderComponent } from './circle-slider/circle-slider.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AngularResizeEventModule } from 'angular-resize-event';
     ContentComponent,
     TellUsComponent,
     SliderComponent,
+    CircleSliderComponent,
   ],
   imports: [
     BrowserModule,
