@@ -13,6 +13,7 @@
 }
 
 .slider img.image-active {
+    user-select: none;
     max-width: 450px;
     width: 50%;
     display: block;

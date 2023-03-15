@@ -8,6 +8,7 @@ footer {
   justify-content: space-between;
 }
 #footer-istok-logo {
+  user-select: none;
   height: 60px;
   width: 131px;
 }
