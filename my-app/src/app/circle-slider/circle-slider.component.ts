@@ -12,13 +12,14 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   @Input() images: string[] = [];
   @Input() dots = true;
   @Input() controls = true;
+  @Input() deltaAngle = 0;
   selectedImage = 0;
   @ViewChild("circledotsContainer")dotsContainer!: ElementRef<HTMLDivElement>;
   @ViewChild("circlecontrols")controlsContainer!: ElementRef<HTMLDivElement>;
   @ViewChild("slider")slider!: ElementRef<HTMLDivElement>;
   length = 0;
   arc = 0;
-  radius = 300;
+  radius = 0;
 
   ngOnInit(): void {
 
@@ -36,7 +37,7 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
     this.controlsContainer.nativeElement.style.bottom = (event.newRect.height / 2).toString() + "px";
     let i = 0;
     this.dotsContainer.nativeElement.childNodes.forEach((element) => {
-      let angle = i * this.arc;
+      let angle = i * this.arc + this.deltaAngle;
       let x = this.radius * Math.cos(angle);
       let y = this.radius * Math.sin(angle);
       (element as HTMLElement).style.left = x + 'px';
