@@ -6,22 +6,44 @@ router-outlet {
 }
 app-footer {
     background-color: #061034;
-    width: 133.33333%;
+    width: 100%;
+    /*width: 133.33333%;*/
 }
 app-content {
     width: 100%;
 }
 app-tell-us {
-    width: 133.33333%;
+    width: 100%;
+    /*width: 1600px;*/
+    /*width: 133.33333%;*/
     background-color: #364AFA;
+    
 }
 app-slider {
     width: 100%;
 }
 #wrapper {
     max-width: 1200px;
+    min-width: 900px;
     display: flex;
     margin: 0px auto 0px;
     flex-direction: column;
     align-items: center;
+}
+@media (max-width: 1200px) { 
+    app-tell-us {
+        width: 100%;
+    }
+    app-footer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1624px){ 
+    app-tell-us {
+        width: 133.33333%;
+    }
+    app-footer {
+        width: 133.33333%;
+    }
 }
