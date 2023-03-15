@@ -1,5 +1,4 @@
 footer {
-  /*width: 75%;*/
   width: 90%;
   margin: 0px auto 80px;
   color: white;
@@ -21,12 +20,12 @@ footer {
   color: #8D93A3;
 }
 @media (max-width: 1200px) { 
-  footer {
+  /*footer {
     width: 98%;
-  }
+  }*/
 }
 @media (min-width: 1624px){ 
-  footer {
+  /*footer {
     width: 75%;
-  }
+  }*/
 }
