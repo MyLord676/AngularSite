@@ -32,13 +32,11 @@ export class SliderComponent implements OnInit {
       this.selectedImage = this.selectedImage + 1;
     else
       this.selectedImage = 0;
-    console.log("Right");
   }
   onLeftClick() {
     if (this.selectedImage > 0)
       this.selectedImage = this.selectedImage - 1;
     else
       this.selectedImage = this.images.length - 1;
-    console.log("Left");
   }
 }

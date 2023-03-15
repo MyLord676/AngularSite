@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 220px;
+    margin-bottom: 220px;
 }
 
 .slider img {
@@ -11,6 +13,7 @@
 }
 
 .slider img.image-active {
+    max-width: 450px;
     width: 50%;
     display: block;
     border-radius: 20px;
@@ -45,4 +48,23 @@
 }
 .arrow:hover {
     cursor: pointer;
+}
+
+#circle-dots-container {
+    position: relative;
+    height: 0px;
+    width: 0px;
+    left: -40px;
+}
+
+.dot {
+    position: absolute;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
+}
+
+.dot-active,
+.dot:hover {
+    opacity: 1;
 }
