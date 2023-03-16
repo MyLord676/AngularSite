@@ -12,6 +12,10 @@ import { TellUsComponent } from './tell-us/tell-us.component';
 import { SliderComponent } from './slider/slider.component';
 import { AngularResizeEventModule } from 'angular-resize-event';
 import { CircleSliderComponent } from './circle-slider/circle-slider.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
+import { ProductsComponent } from './products/products.component';
+import { PressComponent } from './press/press.component';
+import { CareerComponent } from './career/career.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { CircleSliderComponent } from './circle-slider/circle-slider.component';
     TellUsComponent,
     SliderComponent,
     CircleSliderComponent,
+    AboutCompanyComponent,
+    ProductsComponent,
+    PressComponent,
+    CareerComponent,
   ],
   imports: [
     BrowserModule,

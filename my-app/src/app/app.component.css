@@ -14,13 +14,24 @@ app-content {
 app-tell-us {
     width: 100%;
     background-color: #364AFA;
-    
 }
 app-slider {
     width: 75%;
 }
 app-circle-slider {
     width: 75%;
+}
+app-about-company {
+    width: 75%;
+}
+app-products {
+    width: 75%;
+}
+app-press{
+    width: 75%;
+}
+app-career {
+    width: 100%;
 }
 #wrapper {
     max-width: 1600px;

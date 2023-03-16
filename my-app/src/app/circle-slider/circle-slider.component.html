@@ -1,9 +1,31 @@
 <div class="slider" (resized)="onResized($event)" #slider>
     <img *ngFor="let image of images; let i = index" [src]="image" [ngClass]="{'image-active': selectedImage === i}"
-        class="fade">
+        class="fade" class="hide">
+
+    <div *ngIf="controls" class="circle-controls" #circlecontrols>
+        <svg width="40" height="100" viewBox="0 0 40 18" class="arrow" (click)="onLeftClick()" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M3.12971 9.69669L9.4806 16.1191L8.39755 17.2143L0.274689 9.00001L8.39755 0.785725L9.4806 1.88096L3.28353 8.14779L39.5723 8.14778V9.69668L3.12971 9.69669Z"
+                fill="#282828" />
+        </svg>
+
+        <svg width="600" height="600" viewBox="0 0 600 600" class="circle" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="300" cy="300" r="299.5" stroke="#8D93A3" />
+        </svg>
+
+        <svg width="40" height="100" viewBox="0 0 40 18" class="arrow" (click)="onRightClick()" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M36.8693 8.30331L30.5184 1.88094L31.6015 0.785706L39.7243 8.99999L31.6015 17.2143L30.5184 16.119L36.7155 9.85221L0.426758 9.85222V8.30332L36.8693 8.30331Z"
+                fill="#282828" />
+        </svg>
+    </div>
 
     <div *ngIf="dots" id="circle-dots-container" #circledotsContainer>
-        <svg width="80" height="80" class="dot" [ngClass]="{'dot-active': selectedImage === 0}" (click)="selectImage(0)"
+        <img src="assets/images/icons/circle-icon1.svg" class="dot" [ngClass]="{'dot-active': selectedImage === 0}" (click)="selectImage(0)" alt="Svg">
+        <!--<svg width="80" height="80" class="dot" [ngClass]="{'dot-active': selectedImage === 0}" (click)="selectImage(0)"
             viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="39.5" fill="white" stroke="#8D93A3" />
             <g clip-path="url(#clip0_27_1249)">
@@ -22,7 +44,7 @@
                     <rect width="40" height="40" fill="white" transform="translate(20 20)" />
                 </clipPath>
             </defs>
-        </svg>
+        </svg>-->
         <svg width="80" height="80" class="dot" [ngClass]="{'dot-active': selectedImage === 1}" (click)="selectImage(1)"
             viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="40" cy="40" r="39.5" fill="white" stroke="#8D93A3" />
@@ -132,16 +154,4 @@
         </svg>
     </div>
 
-    <div *ngIf="controls" class="circle-controls" #circlecontrols>
-        <svg transform="scale(2)" class="arrow" width="24" height="24" (click)="onLeftClick()"
-            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-            <path
-                d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-4.828 11.5l4.608 3.763-.679.737-6.101-5 6.112-5 .666.753-4.604 3.747h11.826v1h-11.828z" />
-        </svg>
-        <svg transform="scale(2)" class="arrow" width="24" height="24" (click)="onRightClick()"
-            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-            <path
-                d="M12 0c-6.623 0-12 5.377-12 12s5.377 12 12 12 12-5.377 12-12-5.377-12-12-12zm0 1c-6.071 0-11 4.929-11 11s4.929 11 11 11 11-4.929 11-11-4.929-11-11-11zm4.828 11.5l-4.608 3.763.679.737 6.101-5-6.112-5-.666.753 4.604 3.747h-11.826v1h11.828z" />
-        </svg>
-    </div>
 </div>
