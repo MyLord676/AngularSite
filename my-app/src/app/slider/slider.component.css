@@ -72,3 +72,14 @@
 .arrow:hover {
     cursor: pointer;
 }
+
+#header {
+    width: 100%;
+    text-align: left;
+    font-family: Rubik;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 88px;
+    letter-spacing: 0px;
+    margin-bottom: 40px;
+}
