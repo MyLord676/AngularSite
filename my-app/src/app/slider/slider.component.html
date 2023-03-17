@@ -1,5 +1,5 @@
+<div id="header">Эффективная защита информационных систем</div>
 <div *ngIf="images && images.length > 0" class="slider" (resized)="onResized($event)">
-    <div id="header">Эффективная защита информационных систем</div>
     <img *ngFor="let image of images; let i = index"
      [src]="image"
      [ngClass]="{'image-active': selectedImage === i}"

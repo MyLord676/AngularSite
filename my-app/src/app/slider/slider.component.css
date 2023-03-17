@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
 }
 
 .slider img {
@@ -82,4 +81,5 @@
     line-height: 88px;
     letter-spacing: 0px;
     margin-bottom: 40px;
+    margin-top: 100px;
 }

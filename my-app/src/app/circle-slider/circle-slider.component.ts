@@ -10,6 +10,7 @@ import { ResizedEvent } from 'angular-resize-event';
 
 export class CircleSliderComponent implements OnInit, AfterViewInit {
   @Input() images: string[] = [];
+  @Input() icons: string[] = [];
   @Input() dots = true;
   @Input() controls = true;
   @Input() deltaAngle = 0;
@@ -26,8 +27,10 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.length = this.dotsContainer.nativeElement.childNodes.length;
+    this.length = this.icons.length;
     this.arc = 2 * Math.PI * (1 / (this.length));
+    console.log(this.length);
+    console.log(this.icons);
   }
 
   onResized(event: ResizedEvent) {

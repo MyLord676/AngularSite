@@ -39,3 +39,7 @@
 #right {
     margin-left: 30px;
 }
+
+#image {
+    user-select: none;
+}
