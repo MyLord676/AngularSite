@@ -15,8 +15,8 @@
         </svg>
 
         <svg width="600" height="600" viewBox="0 0 600 600" class="circle" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <circle cx="300" cy="300" r="299.5" stroke="#8D93A3" />
+            xmlns="http://www.w3.org/2000/svg" >
+            <circle cx="300" cy="300" r="299.5" stroke="#8D93A3" #circle/>
         </svg>
 
         <svg width="40" height="100" viewBox="0 0 40 18" class="arrow" (click)="onRightClick()" fill="none"
@@ -29,7 +29,7 @@
 
     <div *ngIf="dots" id="circle-dots-container" #circledotsContainer>
         <img *ngFor="let icon of icons; let i = index" [src]="icon" [ngClass]="{'icon-active': selectedImage === i}"
-            class="dot" (click)="selectImage(i)" alt="Svg">
+            class="dot" (click)="selectImage(i)" alt="Svg" [style.width.px]="iconWidth" [style.height.px]="iconHeight">
     </div>
 
 </div>

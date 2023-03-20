@@ -11,6 +11,7 @@ import { ResizedEvent } from 'angular-resize-event';
 export class CircleSliderComponent implements OnInit, AfterViewInit {
   @Input() images: string[] = [];
   @Input() icons: string[] = [];
+  @Input() selectedIcons: string[] = [];
   @Input() dots = true;
   @Input() controls = true;
   @Input() deltaAngle = 0;
@@ -21,6 +22,8 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   length = 0;
   arc = 0;
   radius = 0;
+  iconHeight = 0;
+  iconWidth = 0;
 
   ngOnInit(): void {
 
@@ -29,39 +32,54 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.length = this.icons.length;
     this.arc = 2 * Math.PI * (1 / (this.length));
-    console.log(this.length);
-    console.log(this.icons);
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
 
   onResized(event: ResizedEvent) {
-    this.radius = (+this.slider.nativeElement.offsetHeight) / 1.5;
-    console.log(this.slider.nativeElement.offsetHeight)
-    this.dotsContainer.nativeElement.style.bottom = (event.newRect.height / 2 + 40).toString() + "px";
+    this.iconHeight = (+event.newRect.height) / 3.6;
+    this.iconWidth = this.iconHeight
+
+    this.radius = (this.slider.nativeElement.offsetHeight) / 1.5;
+    this.dotsContainer.nativeElement.style.bottom = (event.newRect.height / 2 + this.iconHeight/2).toString() + "px";
+    this.dotsContainer.nativeElement.style.left = (-(this.iconWidth/2)).toString() + "px";
     this.controlsContainer.nativeElement.style.bottom = (event.newRect.height / 2).toString() + "px";
-    let i = 0;
-    this.dotsContainer.nativeElement.childNodes.forEach((element) => {
+
+    let dots = this.dotsContainer.nativeElement.childNodes;
+    for (let i = 0; i <= dots.length - 1; i++) {
+      if (i >= this.icons.length) {
+        break;
+      }
       let angle = i * this.arc + this.deltaAngle;
       let x = this.radius * Math.cos(angle);
       let y = this.radius * Math.sin(angle);
-      (element as HTMLElement).style.left = x + 'px';
-      (element as HTMLElement).style.top = y + 'px';
-      i++;
-    });
+      let image = dots[i] as HTMLImageElement;
+      image.style.left = x + 'px';
+      image.style.top = y + 'px';
+
+      //console.log((document.querySelector('img.dot') as HTMLImageElement).style.top);
+      /*console.log(this.iconHeight, this.iconWidth);*/
+    }
   }
 
   onRightClick() {
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.icons[this.selectedImage];
     if (this.selectedImage < this.images.length - 1)
       this.selectedImage = this.selectedImage + 1;
     else
       this.selectedImage = 0;
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
   onLeftClick() {
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.icons[this.selectedImage];
     if (this.selectedImage > 0)
       this.selectedImage = this.selectedImage - 1;
     else
       this.selectedImage = this.images.length - 1;
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
   selectImage(index: number) {
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.icons[this.selectedImage];
     this.selectedImage = index;
+    (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
 }

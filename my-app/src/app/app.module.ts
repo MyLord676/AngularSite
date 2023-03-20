@@ -16,6 +16,7 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { ProductsComponent } from './products/products.component';
 import { PressComponent } from './press/press.component';
 import { CareerComponent } from './career/career.component';
+import { AdvantagesComponent } from './advantages/advantages.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CareerComponent } from './career/career.component';
     ProductsComponent,
     PressComponent,
     CareerComponent,
+    AdvantagesComponent,
   ],
   imports: [
     BrowserModule,
