@@ -24,7 +24,12 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   radius = 0;
   iconHeight = 0;
   iconWidth = 0;
-
+  width = 600;
+  height = 600;
+  viewBox = "0 0 600 600";
+  cx = 300;
+  cy = 300;
+  
   ngOnInit(): void {
 
   }
@@ -36,10 +41,23 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   }
 
   onResized(event: ResizedEvent) {
-    this.iconHeight = (+event.newRect.height) / 3.6;
-    this.iconWidth = this.iconHeight
+    let size = window.innerWidth / 10.6;
+    if (size > 80)
+      size = 80;
+    if (size < 30)
+      size = 30;
+    this.iconHeight = size;
+    this.iconWidth = this.iconHeight;
 
+    let radius = (this.slider.nativeElement.offsetHeight) / 1.5;
+    
     this.radius = (this.slider.nativeElement.offsetHeight) / 1.5;
+    this.width = radius * 2;
+    this.height = radius * 2;
+    this.viewBox = "0 0 " + this.width + " " + this.height;
+    this.cx = radius;
+    this.cy = radius;
+
     this.dotsContainer.nativeElement.style.bottom = (event.newRect.height / 2 + this.iconHeight/2).toString() + "px";
     this.dotsContainer.nativeElement.style.left = (-(this.iconWidth/2)).toString() + "px";
     this.controlsContainer.nativeElement.style.bottom = (event.newRect.height / 2).toString() + "px";
@@ -50,14 +68,11 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
         break;
       }
       let angle = i * this.arc + this.deltaAngle;
-      let x = this.radius * Math.cos(angle);
-      let y = this.radius * Math.sin(angle);
+      let x = radius * Math.cos(angle);
+      let y = radius * Math.sin(angle);
       let image = dots[i] as HTMLImageElement;
       image.style.left = x + 'px';
       image.style.top = y + 'px';
-
-      //console.log((document.querySelector('img.dot') as HTMLImageElement).style.top);
-      /*console.log(this.iconHeight, this.iconWidth);*/
     }
   }
 
