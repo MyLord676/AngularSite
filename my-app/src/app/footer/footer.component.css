@@ -82,6 +82,24 @@ footer {
   color: white;
   width: 100%;
 }
+#background-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image:url(/assets/images/footer.png);
+  background-position: right 0px;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+#background-light {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image:url(/assets/images/icons/footer-light.svg);
+  background-repeat: no-repeat;
+  background-position: right 0px;
+  background-size: initial;
+}
 @media (max-width: 1200px) { 
   /*footer {
     width: 98%;

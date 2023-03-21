@@ -6,7 +6,7 @@ router-outlet {
     width: 75%;
 }
 app-footer {
-    background-color: #061034;
+    background-color: #000000;
     width: 100%;
 }
 app-content {
