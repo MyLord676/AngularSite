@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "reset.css";
 
+body {
+     font-family: Rubik;
+}
+
 /* rubik-regular - cyrillic_cyrillic-ext_latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
