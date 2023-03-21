@@ -3,22 +3,53 @@ footer {
   margin: 0px auto 80px;
   color: white;
 }
+
 #footer-menu {
   display: flex;
   justify-content: space-between;
+  margin: 61px 0px;
 }
+
+.footer-topic {
+  max-width: 30%;
+}
+
+.footer-header {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
 #footer-istok-logo {
   user-select: none;
   height: 60px;
   width: 131px;
 }
-.footer-topic {
-  margin: 61px 0px;
-}
+
 #footer-policy {
   display: flex;
   justify-content: space-between;
   color: #8D93A3;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 #tell-wrapper {
@@ -27,33 +58,41 @@ footer {
   justify-content: flex-start;
   margin-top: 80px;
 }
+
 #tell-us-main {
   width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
+
 #header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
+
 #contacts {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 10px;
 }
+
 .inputs {
   height: 60px;
   padding-left: 10px;
   margin: 24px 24px 16px 0px;
 }
+
 #check {
   color: white;
   margin: 24px 24px 24px 0px;
 }
+
 #label {
   margin-left: 10px;
 }
+
 #send {
   margin-top: 18px;
   margin-bottom: 24px;
@@ -63,11 +102,24 @@ footer {
   background-color: #364AFA;
   color: #FFFFFF;
 }
+
 #header-text {
   font-size: 40px;
-  text-align: start;
-  margin-bottom: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 20px;
 }
+
+#header-content {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
 #background-image {
   display: flex;
   justify-content: center;
@@ -78,34 +130,37 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
 .line {
   color: white;
   width: 100%;
 }
+
 #background-image {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  background-image:url(/assets/images/footer.png);
+  background-image: url(/assets/images/footer.png);
   background-position: right 0px;
   background-repeat: no-repeat;
   background-size: initial;
 }
+
 #background-light {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image:url(/assets/images/icons/footer-light.svg);
+  background-image: url(/assets/images/icons/footer-light.svg);
   background-repeat: no-repeat;
   background-position: right 0px;
   background-size: initial;
 }
-@media (max-width: 1200px) { 
+
+@media (max-width: 1200px) {
   /*footer {
     width: 98%;
   }*/
 }
-@media (min-width: 1624px){ 
+
+@media (min-width: 1624px) {
   /*footer {
     width: 75%;
   }*/

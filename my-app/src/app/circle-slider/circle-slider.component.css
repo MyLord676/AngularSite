@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 220px;
     margin-bottom: 220px;
@@ -35,7 +34,7 @@
     }
 }
 
-.circle-controls{
+.circle-controls {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -47,6 +46,7 @@
 .arrow {
     fill: black;
 }
+
 .arrow:hover {
     cursor: pointer;
 }
@@ -61,46 +61,35 @@
     position: absolute;
     cursor: pointer;
     user-select: none;
-    /*display: block;*/
-    /*transition: opacity 0.6s ease;
-    opacity: 0.5;*/
-    /*stroke:blue ;*/
-    /*width: 50px;
-    height: 50px;*/
-    /*height: 100px;
-    width: 100px;*/
 }
-
-/*.dot-active,
-.dot:hover {*/
-   /* opacity: 1;*/
-   
-/*}*/
 
 #header {
     display: flex;
     flex-direction: row;
     margin-top: 180px;
 }
+
 .block {
     width: 50%;
 }
+
 .left {
-font-family: Rubik;
-font-size: 40px;
-font-weight: 500;
-line-height: 44px;
-letter-spacing: 0px;
-text-align: left;
+    font-family: Rubik;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 0px;
+    text-align: left;
 
 }
+
 .right {
-font-family: Rubik;
-font-size: 18px;
-font-weight: 400;
-line-height: 25px;
-letter-spacing: 0px;
-text-align: left;
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
 
 }
 

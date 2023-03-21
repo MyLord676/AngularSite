@@ -56,7 +56,7 @@
     opacity: 1;
 }
 
-.controls{
+.controls {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -68,6 +68,7 @@
 .arrow {
     fill: white;
 }
+
 .arrow:hover {
     cursor: pointer;
 }
