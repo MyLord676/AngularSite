@@ -32,6 +32,7 @@
 
 .wrapper {
   width: 75%;
+  
 }
 
 #header-text {
@@ -89,10 +90,6 @@ margin-top: 20px;
 
 #text {
   margin-top: 130px;
-}
-
-#header-image {
-  position: relative;
 }
 
 #background-image {
