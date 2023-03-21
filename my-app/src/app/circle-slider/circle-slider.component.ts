@@ -49,14 +49,12 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
     this.iconHeight = size;
     this.iconWidth = this.iconHeight;
 
-    let radius = (this.slider.nativeElement.offsetHeight) / 1.5;
-    
     this.radius = (this.slider.nativeElement.offsetHeight) / 1.5;
-    this.width = radius * 2;
-    this.height = radius * 2;
+    this.width = this.radius * 2;
+    this.height = this.radius * 2;
     this.viewBox = "0 0 " + this.width + " " + this.height;
-    this.cx = radius;
-    this.cy = radius;
+    this.cx = this.radius;
+    this.cy = this.radius;
 
     this.dotsContainer.nativeElement.style.bottom = (event.newRect.height / 2 + this.iconHeight/2).toString() + "px";
     this.dotsContainer.nativeElement.style.left = (-(this.iconWidth/2)).toString() + "px";
@@ -68,8 +66,8 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
         break;
       }
       let angle = i * this.arc + this.deltaAngle;
-      let x = radius * Math.cos(angle);
-      let y = radius * Math.sin(angle);
+      let x = this.radius * Math.cos(angle);
+      let y = this.radius * Math.sin(angle);
       let image = dots[i] as HTMLImageElement;
       image.style.left = x + 'px';
       image.style.top = y + 'px';
