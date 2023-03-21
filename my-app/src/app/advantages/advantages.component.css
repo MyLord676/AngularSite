@@ -78,7 +78,7 @@
 #background-image {
   width: 100%;
   background-image:url(/assets/images/advantages.png);
-  background-position: 200px bottom;
+  background-position: 0px bottom;
   background-repeat: no-repeat;
   background-size: initial;
 }
