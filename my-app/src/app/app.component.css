@@ -34,6 +34,10 @@ app-press{
 app-career {
     width: 100%;
 }
+app-advantages {
+    width: 100%;
+    background-color: #000000;
+}
 #wrapper {
     max-width: 1600px;
     /*min-width: 1200px;*/

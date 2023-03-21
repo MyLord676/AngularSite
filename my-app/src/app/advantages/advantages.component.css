@@ -5,19 +5,12 @@
   align-items: center;
 }
 
-#main-img {
-  user-select: none;
-  width: 100%;
-  height: auto;
-}
-
 #text {
-  position: relative;
   width: 100%;
-  height: 100px;
   color: white;
   display: flex;
   justify-content: flex-end;
+  margin-top: 120px;
 }
 
 #collumns {
@@ -80,6 +73,30 @@
 .logo {
   margin-bottom: 24px;
   user-select: none;
+}
+
+#background-image {
+  width: 100%;
+  background-image:url(/assets/images/advantages.png);
+  background-position: 200px bottom;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+
+#background-light1 {
+  width: 100%;
+  background-image:url(/assets/images/icons/advantages-light1.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: initial;
+}
+
+#background-light2 {
+  width: 100%;
+  background-image:url(/assets/images/icons/advantages-light2.svg);
+  background-repeat: no-repeat;
+  background-position: right 0px;
+  background-size: initial;
 }
 
 @media (max-width: 1450px) { 
