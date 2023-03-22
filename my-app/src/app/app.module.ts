@@ -17,6 +17,7 @@ import { ProductsComponent } from './products/products.component';
 import { PressComponent } from './press/press.component';
 import { CareerComponent } from './career/career.component';
 import { AdvantagesComponent } from './advantages/advantages.component';
+import { CooperateComponent } from './cooperate/cooperate.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AdvantagesComponent } from './advantages/advantages.component';
     PressComponent,
     CareerComponent,
     AdvantagesComponent,
+    CooperateComponent,
   ],
   imports: [
     BrowserModule,
