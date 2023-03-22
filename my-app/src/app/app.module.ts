@@ -18,6 +18,7 @@ import { PressComponent } from './press/press.component';
 import { CareerComponent } from './career/career.component';
 import { AdvantagesComponent } from './advantages/advantages.component';
 import { CooperateComponent } from './cooperate/cooperate.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CooperateComponent } from './cooperate/cooperate.component';
     CareerComponent,
     AdvantagesComponent,
     CooperateComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,

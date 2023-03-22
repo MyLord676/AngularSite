@@ -54,6 +54,10 @@ app-cooperate {
     width: 75%;
 }
 
+app-services {
+    width: 75%;
+}
+
 #wrapper {
     max-width: 1600px;
     /*min-width: 1200px;*/
