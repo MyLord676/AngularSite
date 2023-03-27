@@ -1,10 +1,25 @@
-<div id="background-image">
-  <div id="background-light1">
-    <div id="background-light2">
+<div class="background-image" [ngClass]="{'noImage': dropDown}">
+  <div class="background-light1" [ngClass]="{'noImage': dropDown}">
+    <div class="background-light2" [ngClass]="{'noImage': dropDown}">
       <div class="wrapper">
-        <div class="toolbar">
-          <img id="istok-logo" width="40" alt="Istok Logo" src="assets/images/icons/logo.svg" />
-          <div class="menu">
+        <div class="header">
+          <div class="toolbar">
+            <img id="istok-logo" alt="Istok Logo" src="assets/images/icons/logo.svg" />
+            <div class="menu" *ngIf="screenWidth > 1100;">
+              <a class="menu-button" href="/">О компании</a>
+              <a class="menu-button" href="/">Услуги</a>
+              <a class="menu-button" href="/">Продукты</a>
+              <a class="menu-button" href="/">Карьера</a>
+              <a class="menu-button" href="/">Пресс-центр</a>
+              <a class="menu-button" href="/">Контакты</a>
+            </div>
+            <img id="dropdown-icon" alt="Istok Logo" src="assets/images/icons/header-dropdown1.svg"
+              *ngIf="screenWidth <= 1100;" (click)="dropdownClick($event)" />
+          </div>
+          <hr class="line" *ngIf="dropDown">
+        </div>
+        <div class="dropdown" *ngIf="dropDown" [ngStyle]="{'height.px': main.offsetHeight}">
+          <div class="drop-menu">
             <a class="menu-button" href="/">О компании</a>
             <a class="menu-button" href="/">Услуги</a>
             <a class="menu-button" href="/">Продукты</a>
@@ -12,38 +27,50 @@
             <a class="menu-button" href="/">Пресс-центр</a>
             <a class="menu-button" href="/">Контакты</a>
           </div>
-        </div>
-        <div id="text">
-          <div id="header-text">
-            <div class="blue">Эффективная защита </div>
-            информационных систем
-          </div>
-          <div id="content">Весь спектр цифровых решений и услуг для максимизации эффективности бизнеса
+          <div class="contacts">
+            <div class="contacts-header menu-button">Контакты</div>
+            <div class="menu-button">г. Ижевск, ул. Максима Горького, д. 43, офис 435</div>
+            <div class="menu-button">hello@istokudm.ru</div>
+            <div class="menu-button">+7 (3412) 93-03-80</div>
           </div>
         </div>
-        <div id="buttons">
-          <div class="button">
-            <img src="assets/images/icons/header1.svg" width="35px" height="35px" alt="Svg">
-            <div class="button-text">
-              Информационная безопасность
+        <div #main>
+          <div>
+            <div id="header-text">
+              <div class="blue">Эффективная защита </div>
+              информационных систем
+            </div>
+            <div id="content">Весь спектр цифровых решений и услуг для максимизации эффективности бизнеса
             </div>
           </div>
-          <div class="button">
-            <img src="assets/images/icons/header2.svg" width="35px" height="35px" alt="Svg">
-            <div class="button-text">
-              Информационные технологии
+          <div id="buttons">
+            <div class="row">
+              <div class="button">
+                <img src="assets/images/icons/header1.svg" class="svg" alt="Svg">
+                <div class="button-text">
+                  Информационная безопасность
+                </div>
+              </div>
+              <div class="button">
+                <img src="assets/images/icons/header2.svg" class="svg" alt="Svg">
+                <div class="button-text">
+                  Информационные технологии
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="button">
-            <img src="assets/images/icons/header3.svg" width="35px" height="35px" alt="Svg">
-            <div class="button-text">
-              Дизайн и брендинг
-            </div>
-          </div>
-          <div class="button">
-            <img src="assets/images/icons/header4.svg" width="35px" height="35px" alt="Svg">
-            <div class="button-text">
-              Системная интеграция
+            <div class="row">
+              <div class="button">
+                <img src="assets/images/icons/header3.svg" class="svg" alt="Svg">
+                <div class="button-text">
+                  Дизайн и брендинг
+                </div>
+              </div>
+              <div class="button">
+                <img src="assets/images/icons/header4.svg" class="svg" alt="Svg">
+                <div class="button-text">
+                  Системная интеграция
+                </div>
+              </div>
             </div>
           </div>
         </div>

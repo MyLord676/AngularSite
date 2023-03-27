@@ -6,5 +6,8 @@
         <div class="block" id="right">Компания Istok предоставляет комплекс услуг в области внедрения, обслуживания
             и защиты информационных систем любой сложности.</div>
     </div>
-    <img id="image" src="assets/images/about-company.png">
+    <div id="images">
+        <img id="building" *ngIf="screenWidth > 640" src="assets/images/about-company.png">
+        <img id="building" *ngIf="screenWidth <= 640"src="assets/images/about-company2.png">
+    </div>
 </div>

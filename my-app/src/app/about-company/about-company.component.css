@@ -11,10 +11,11 @@
     width: 100%;
     margin-top: 40px;
     margin-bottom: 60px;
+    justify-content: space-between;
 }
 
 .block {
-    width: 50%;
+    width: 48%;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
@@ -30,15 +31,39 @@
     text-align: left;
 }
 
-#left {
-    margin-right: 30px;
-}
+#left {}
 
-#right {
-    margin-left: 30px;
-}
+#right {}
 
-#image {
+#images {
     user-select: none;
     width: 100%;
+    object-fit: contain;
+}
+
+#building {
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    #head {
+        flex-direction: column;
+    }
+
+    #right {
+        margin-top: 20px;
+    }
+
+    .block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480) and (min-width: 320) {
+
+}
+
+@media (max-width: 640) and (min-width: 480) {
+
 }
