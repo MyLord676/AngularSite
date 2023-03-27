@@ -34,9 +34,9 @@
 </div>
 <div *ngIf="screenWidth < 640" class="buttons">
     <hr class="line">
-    <div *ngFor="let icon of iconsList; let i = index">
+    <div *ngFor="let icon of iconsList; let i = index" (click)="selectImage(i)">
         <div class="button">
-            <img [src]="icon" class="logo" (click)="selectImage(i)" alt="Svg"
+            <img [src]="icon" class="logo" alt="Svg"
                 [ngClass]="{'icon-active': selectedImage === i}">
             <div class="button-text">{{text[i]}}</div>
         </div>

@@ -72,15 +72,16 @@
   user-select: none;
 }
 
-#background-image {
+.background-image {
   width: 100%;
   background-image: url(/assets/images/advantages.png);
-  background-position: 0px bottom;
+  background-position-x: 10%;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: initial;
 }
 
-#background-light1 {
+.background-light1 {
   width: 100%;
   background-image: url(/assets/images/icons/advantages-light1.svg);
   background-repeat: no-repeat;
@@ -88,7 +89,7 @@
   background-size: initial;
 }
 
-#background-light2 {
+.background-light2 {
   width: 100%;
   background-image: url(/assets/images/icons/advantages-light2.svg);
   background-repeat: no-repeat;
@@ -96,24 +97,62 @@
   background-size: initial;
 }
 
+.noLight {
+  background-image: none;
+}
+
 @media (max-width: 1450px) {
-  .logo {
-    margin-bottom: 12px;
+  #text {
+    justify-content: center;
+    margin-top: 50px;
+  }
+  #collumns {
+    flex-direction: column;
   }
 
-  .block {
+  #collumn-header {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 100%;
+  }
+  #wrapper-content {
+    width:100%;
+  }
+
+  .item {
+    justify-content: space-between;
+  }
+
+  .background-image {
+    padding-bottom: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  #collumns {
+      width: 93.75%;
+  }
+  .background-image {
+    background-position-x: 6.25%;
+  }
+  
+}
+
+@media (max-width: 1100px) and (min-width: 900px) {
+  #collumns {
+      width: 85%;
+  }
+  .background-image {
+    background-position-x: 15%;
+  }
+}
+
+@media (max-width: 640px){
+  .item {
+    flex-direction: column;
     margin-bottom: 0px;
   }
-
-  .item {
-    margin-bottom: 20px;
-  }
-
-  .header {
-    margin-bottom: 5px;
-  }
-
-  .item {
-    margin-bottom: 20px;
+  .block {
+    width: 100%;
   }
 }

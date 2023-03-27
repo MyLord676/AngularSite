@@ -1,6 +1,6 @@
-<div id="background-image">
-  <div id="background-light1">
-    <div id="background-light2">
+<div class="background-image" #image [ngStyle]="(screenWidth < 1450) ? {'background-position-y.px': image.offsetHeight - 180} : {}">
+  <div class="background-light1" [ngClass]="{'noLight': screenWidth < 1450}">
+    <div class="background-light2" [ngClass]="{'noLight': screenWidth < 1450}">
       <div id="content" #content>
         <div id="text" #text>
           <div id="collumns">
