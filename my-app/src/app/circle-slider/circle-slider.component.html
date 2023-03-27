@@ -7,8 +7,8 @@
         class="hide">
 
     <div *ngIf="controls" class="circle-controls" #circlecontrols>
-        <svg *ngIf="screenWidth > 640" width="40" height="100" viewBox="0 0 40 18" class="arrow arrow-left" (click)="onLeftClick()" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg *ngIf="screenWidth > 640" width="40" height="100" viewBox="0 0 40 18" class="arrow arrow-left"
+            (click)="onLeftClick()" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M3.12971 9.69669L9.4806 16.1191L8.39755 17.2143L0.274689 9.00001L8.39755 0.785725L9.4806 1.88096L3.28353 8.14779L39.5723 8.14778V9.69668L3.12971 9.69669Z"
                 fill="#282828" />
@@ -19,8 +19,8 @@
             <circle [attr.cx]="cx" [attr.cy]="cy" [attr.r]="radius" stroke="#8D93A3" #circle />
         </svg>
 
-        <svg *ngIf="screenWidth > 640" width="40" height="100" viewBox="0 0 40 18" class="arrow arrow-right" (click)="onRightClick()" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <svg *ngIf="screenWidth > 640" width="40" height="100" viewBox="0 0 40 18" class="arrow arrow-right"
+            (click)="onRightClick()" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M36.8693 8.30331L30.5184 1.88094L31.6015 0.785706L39.7243 8.99999L31.6015 17.2143L30.5184 16.119L36.7155 9.85221L0.426758 9.85222V8.30332L36.8693 8.30331Z"
                 fill="#282828" />
@@ -31,5 +31,15 @@
         <img *ngFor="let icon of icons; let i = index" [src]="icon" [ngClass]="{'icon-active': selectedImage === i}"
             class="dot" (click)="selectImage(i)" alt="Svg" [style.width.px]="iconWidth" [style.height.px]="iconHeight">
     </div>
-
+</div>
+<div *ngIf="screenWidth < 640" class="buttons">
+    <hr class="line">
+    <div *ngFor="let icon of iconsList; let i = index">
+        <div class="button">
+            <img [src]="icon" class="logo" (click)="selectImage(i)" alt="Svg"
+                [ngClass]="{'icon-active': selectedImage === i}">
+            <div class="button-text">{{text[i]}}</div>
+        </div>
+        <hr class="line">
+    </div>
 </div>

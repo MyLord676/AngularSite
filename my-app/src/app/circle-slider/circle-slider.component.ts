@@ -12,9 +12,11 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   @Input() images: string[] = [];
   @Input() icons: string[] = [];
   @Input() selectedIcons: string[] = [];
+  @Input() iconsList: string[] = [];
   @Input() dots = true;
   @Input() controls = true;
   @Input() deltaAngle = 0;
+  @Input() text: string[] = [];
   selectedImage = 0;
   @ViewChild("circledotsContainer")dotsContainer!: ElementRef<HTMLDivElement>;
   @ViewChild("circlecontrols")controlsContainer!: ElementRef<HTMLDivElement>;
@@ -89,7 +91,7 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
       this.selectedImage = 0;
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
-  
+
   onLeftClick() {
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.icons[this.selectedImage];
     if (this.selectedImage > 0)
