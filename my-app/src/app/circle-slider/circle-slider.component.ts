@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
@@ -29,6 +29,13 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
   viewBox = "0 0 600 600";
   cx = 300;
   cy = 300;
+  public screenWidth: number;
+  public screenHeight: number;
+
+  constructor () {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
   
   ngOnInit(): void {
 
@@ -82,6 +89,7 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
       this.selectedImage = 0;
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
+  
   onLeftClick() {
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.icons[this.selectedImage];
     if (this.selectedImage > 0)
@@ -90,9 +98,16 @@ export class CircleSliderComponent implements OnInit, AfterViewInit {
       this.selectedImage = this.images.length - 1;
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
   }
+  
   selectImage(index: number) {
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.icons[this.selectedImage];
     this.selectedImage = index;
     (this.dotsContainer.nativeElement.childNodes[this.selectedImage] as HTMLImageElement).src = this.selectedIcons[this.selectedImage];
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
   }
 }

@@ -37,7 +37,7 @@
 .circle-controls {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 0px;
@@ -46,6 +46,17 @@
 .arrow {
     fill: black;
 }
+
+.arrow-right {
+    position: absolute;
+    right: 10px;
+}
+
+.arrow-left {
+    position: absolute;
+    left: 10px;
+}
+
 
 .arrow:hover {
     cursor: pointer;
@@ -63,7 +74,7 @@
     user-select: none;
 }
 
-#header {
+.header {
     display: flex;
     flex-direction: row;
     margin-top: 180px;
@@ -90,10 +101,63 @@
     line-height: 25px;
     letter-spacing: 0px;
     text-align: left;
+}
+
+@media (max-width: 640px){
+    .header {
+        flex-direction: column;
+    }
+    
+    .block {
+        width: 100%;
+    }
+
+    .slider img.image-active {
+        width: 65%;
+    }
+}
+
+@media (max-width: 320px){
+    .header {
+        margin-top: 60px;
+    }
+
+    .slider {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 900px) {
 
 }
 
-/*.icon-active {
-    width: 50px;
-    height: 50px;
-}*/
+@media (max-width: 480px) and (min-width: 320px) {
+    .header {
+        margin-top: 80px;
+    }
+
+    .right {
+        margin-top: 15px;
+    }
+
+    .slider {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 640px) and (min-width: 480px) {
+    .header {
+        margin-top: 120px;
+    }
+
+    .right {
+        margin-top: 40px;
+    }
+
+    .slider {
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+}

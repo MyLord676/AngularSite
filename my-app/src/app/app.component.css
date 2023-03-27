@@ -71,10 +71,18 @@ app-services {
     app-about-company {
         width: 93.75%;
     }
+    
+    app-circle-slider {
+        width: 93.75%;
+    }
 }
 
 @media (max-width: 1100px) and (min-width: 900px) {
     app-about-company {
+        width: 85%;
+    }
+
+    app-circle-slider {
         width: 85%;
     }
 }

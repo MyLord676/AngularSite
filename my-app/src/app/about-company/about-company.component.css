@@ -60,10 +60,10 @@
     }
 }
 
-@media (max-width: 480) and (min-width: 320) {
+@media (max-width: 480px) and (min-width: 320px) {
 
 }
 
-@media (max-width: 640) and (min-width: 480) {
+@media (max-width: 640px) and (min-width: 480px) {
 
 }
