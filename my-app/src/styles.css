@@ -13,6 +13,14 @@ html {
      box-sizing: inherit;
 }
 
+.main-wrapper {
+     max-width: 1600px;
+     display: flex;
+     margin: 0px auto 0px;
+     flex-direction: column;
+     align-items: center;
+ }
+
 /* rubik-regular - cyrillic_cyrillic-ext_latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
