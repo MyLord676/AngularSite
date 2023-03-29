@@ -75,6 +75,22 @@ app-services {
     app-circle-slider {
         width: 93.75%;
     }
+
+    app-products {
+        width: 93.75%;
+    }
+
+    app-services {
+        width: 93.75%;
+    }
+
+    app-cooperate {
+        width: 93.75%;
+    }
+
+    app-press {
+        width: 93.75%;
+    }
 }
 
 @media (max-width: 1100px) and (min-width: 900px) {
@@ -83,6 +99,22 @@ app-services {
     }
 
     app-circle-slider {
+        width: 85%;
+    }
+
+    app-products {
+        width: 85%;
+    }
+
+    app-services {
+        width: 85%;
+    }
+
+    app-cooperate {
+        width: 85%;
+    }
+
+    app-press {
         width: 85%;
     }
 }

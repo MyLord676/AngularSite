@@ -15,12 +15,6 @@
 
 .block {
     width: 50%;
-    font-family: Rubik;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0px;
-    text-align: left;
 }
 
 #title {
@@ -29,6 +23,7 @@
     line-height: 44px;
     letter-spacing: 0px;
     text-align: left;
+    white-space: nowrap;
 }
 
 .left {
@@ -39,6 +34,15 @@
     text-align: left;
     display: block;
     font-weight: bold;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 10px;
 }
 
 .right {
@@ -55,4 +59,79 @@
     background-color: gray;
     height: 1px;
     margin-top: 40px;
+}
+
+@media (max-width: 640px) {
+    .pair {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .block {
+        width: 100%;
+    }
+
+    #main {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0px;
+    }
+
+    .date {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    .right {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+    }
+
+    #title {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 31px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 640px) and (min-width: 480px) {
+    .left {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0px;
+    }
+
+    .date {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+
+    .right {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0px;
+    }
+
+    #title {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 44px;
+        letter-spacing: 0px;
+    }
 }
