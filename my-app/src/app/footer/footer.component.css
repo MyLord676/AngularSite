@@ -111,8 +111,6 @@ footer {
 
 .checkbox-text {
   margin-left: 10px;
-  display: flex;
-  flex-wrap: wrap;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -229,9 +227,90 @@ footer {
   background-size: initial;
 }
 
-@media (max-width: 480px) and (min-width: 320px) {}
+@media (max-width: 480px) {
+  #send {
+    width: 100%;
+  }
+  #header-text {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 31px;
+  }
 
-@media (max-width: 640px) and (min-width: 480px) {}
+  #header-content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .inputs {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .checkbox-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  #send {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .footer-header {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  #footer-policy {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 480px) {
+
+}
+
+@media (max-width: 800px) {
+  #tell-wrapper {
+    width: 100%;
+  }
+
+  #footer-menu {
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+
+  .footer-topic {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  footer {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  #footer-policy {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 900px) {
   #wrapper {
@@ -242,5 +321,12 @@ footer {
 @media (max-width: 1100px) and (min-width: 900px) {
   #wrapper {
     width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-agreement {
+    display: flex;
+    flex-direction: column;
   }
 }
