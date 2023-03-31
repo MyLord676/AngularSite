@@ -34,12 +34,14 @@ footer {
   line-height: 25px;
   letter-spacing: 0px;
   text-align: left;
+  opacity: 80%;
+  margin-bottom: 8px;
 }
 
 #footer-istok-logo {
   user-select: none;
-  height: 60px;
-  width: 131px;
+  height: 100px;
+  width: 200px;
 }
 
 #footer-policy {
@@ -79,9 +81,12 @@ footer {
   width: 100%;
 }
 
+.inputs::placeholder{
+  color: #8D93A3;
+}
+
 .inputs {
   height: 60px;
-  padding-left: 10px;
   margin: 24px 24px 16px 0px;
   border-right: none;
   border-left: none;
@@ -174,6 +179,7 @@ footer {
   line-height: 25px;
   letter-spacing: 0px;
   text-align: center;
+  border: none;
 }
 
 #header-text {
@@ -191,6 +197,7 @@ footer {
   line-height: 25px;
   letter-spacing: 0px;
   text-align: left;
+  opacity: 80%;
 }
 
 #background-image {
@@ -310,6 +317,10 @@ footer {
 @media (max-width: 640px) {
   #footer-policy {
     flex-direction: column;
+  }
+
+  #footer-istok-logo {
+    width: 150px;
   }
 }
 
