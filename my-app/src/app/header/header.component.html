@@ -1,4 +1,5 @@
-<div class="background-image" [ngClass]="{'noImage': dropDown}">
+<div class="background-image" [ngClass]="{'noImage': dropDown}"
+  [ngStyle]="{'background-position-x.px': screenWidth / 2 - 161}">
   <div class="background-light1" [ngClass]="{'noImage': dropDown}">
     <div class="background-light2" [ngClass]="{'noImage': dropDown}">
       <div class="wrapper">
@@ -38,7 +39,8 @@
           <div>
             <div id="header-text">
               <div class="blue">Эффективная защита </div>
-              информационных систем
+              <div>информационных</div>
+              <div>систем</div>
             </div>
             <div id="content">Весь спектр цифровых решений и услуг для максимизации эффективности бизнеса
             </div>

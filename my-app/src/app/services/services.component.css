@@ -72,6 +72,11 @@
   margin-bottom: 12px;
 }
 
+.scroll {
+  position: relative;
+  width: 100%;
+}
+
 @media (max-width: 900px) and (min-width: 480px) {
   .header {
     margin-bottom: 20px;
@@ -93,6 +98,10 @@
 
   .side {
     width: 100%;
+  }
+
+  .scroll {
+    position: unset;
   }
 
 }

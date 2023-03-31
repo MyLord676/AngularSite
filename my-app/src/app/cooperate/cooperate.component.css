@@ -10,8 +10,7 @@
 .block {
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .companies {
@@ -30,9 +29,9 @@
 }
 
 #header {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 500;
-  line-height: 44px;
+  line-height: 32px;
   letter-spacing: 0px;
   text-align: left;
   margin-bottom: 20px;
@@ -50,17 +49,16 @@
   padding: 30px 50px;
   background: #F0F6FA;
   border-radius: 8px;
-  margin-bottom: 30px;
-  width: fit-content;
+  margin-bottom: 25px;
 }
 
-.left {
-  margin-right: 30px;
+.svg {
+  max-width: 100%;
 }
 
-.svg {}
+@media (max-width: 1500px) {}
 
-@media (max-width: 1500px) {
+@media (max-width: 800px) {
   .content {
     flex-direction: column;
   }
@@ -74,28 +72,6 @@
   }
 }
 
-@media (max-width: 800px) {
-  .block {
-    flex-direction: column;
-  }
-
-  .left {
-    margin-right: 0px;
-  }
-}
-
-@media (max-width: 400px) and (min-width: 330px) {
-  .svg {
-    width: 200px;
-  }
-}
-
-@media (max-width: 330px) {
-  .svg {
-    width: 135px;
-  }
-}
-
 @media (max-width: 480px) {
   #header {
     font-size: 28px;
@@ -106,16 +82,18 @@
     font-size: 14px;
     line-height: 20px;
   }
-}
 
-@media (max-width: 640px) and (min-width: 480px) {
-  #header {
-    font-size: 40px;
-    line-height: 44px;
+  .block {
+    flex-direction: column;
   }
 
-  #content {
-    font-size: 18px;
-    line-height: 25px;
+  .company {
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  .company {
+    width: 48%;
   }
 }

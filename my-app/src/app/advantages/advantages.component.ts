@@ -14,14 +14,25 @@ export class AdvantagesComponent {
   public screenWidth: number;
   public screenHeight: number;
 
+  public wrapperWidth: number;
+  public wrapperHeight: number;
+
   constructor() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+
+    this.wrapperWidth = window.innerWidth;
+    this.wrapperHeight = window.innerHeight;
   }
   
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+  }
+
+  onResized(event: ResizedEvent) {
+    this.wrapperWidth = event.newRect.width;
+    this.wrapperHeight = event.newRect.height;
   }
 }
