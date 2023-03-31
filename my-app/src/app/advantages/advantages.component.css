@@ -156,11 +156,6 @@
 }
 
 @media (max-width: 640px) {
-  .item {
-    flex-direction: column;
-    margin-bottom: 0px;
-  }
-
   .block {
     width: 100%;
   }
@@ -177,6 +172,11 @@
     font-size: 28px;
     line-height: 31px;
     letter-spacing: 0px;
+  }
+
+  .item {
+    flex-direction: column;
+    margin-bottom: 0px;
   }
 }
 
