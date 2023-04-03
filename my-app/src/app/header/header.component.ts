@@ -21,9 +21,13 @@ export class HeaderComponent {
   onResize(event: Event) {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
+    if (this.screenWidth > 1100)
+      this.dropDown = false;
   }
 
   dropdownClick(event: Event) {
     this.dropDown = !this.dropDown;
+    if (this.screenWidth > 1100)
+      this.dropDown = false;
   }
 }
