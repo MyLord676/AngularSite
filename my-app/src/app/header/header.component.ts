@@ -10,11 +10,13 @@ export class HeaderComponent {
   public dropDown: boolean;
   public screenWidth: number;
   public screenHeight: number;
+  @ViewChild("main")main!: ElementRef<HTMLDivElement>;
 
   constructor() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     this.dropDown = false;
+    /*this.main.nativeElement.clientHeight*/
   }
 
   @HostListener('window:resize', ['$event'])

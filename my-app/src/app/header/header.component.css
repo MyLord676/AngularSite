@@ -46,6 +46,7 @@
   letter-spacing: 0px;
   text-align: left;
   color: white;
+  padding-top: 116px;
 }
 
 .content {
@@ -55,7 +56,9 @@
   letter-spacing: 0px;
   text-align: left;
   color: white;
-  opacity: 80%
+  opacity: 80%;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 #buttons {
@@ -72,12 +75,14 @@
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.3);
 
-  width: calc(50% - 10px);
+  width: calc(50% - 15px);
   padding: 24px;
+
+  margin-bottom: 30px;
 }
 
 .row {
-  width: calc(50% - 10px);
+  width: calc(50% - 15px);
   display: flex;
   justify-content: space-between;
 }
@@ -145,6 +150,7 @@
 .svg {
   width: 35px;
   height: 35px;
+  margin-bottom: 20px;
 }
 
 .line {
@@ -154,6 +160,7 @@
 }
 
 .header {
+  margin-top: 30px;
 }
 
 #dropdown-icon {
@@ -166,13 +173,18 @@
   position: absolute;
   width: 100%;
   left: 0px;
-  /*opacity: 0%;*/
+
+  display: flex;
+  justify-content: center;
 }
 
 .drop-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: absolute;
+  top: 10%;
 }
 
 .contacts-header {
@@ -188,27 +200,38 @@
   opacity: 100%;
 }
 
+.contacts {
+  position: absolute;
+  top: 60%;
+}
+
 @media (min-width: 480px) {
   .menu-button {
     line-height: 23px;
   }
 
-  .drop-menu {
-  }
+  .drop-menu {}
 
-  .row {
-  }
+  .row {}
 }
 
 @media (max-width: 480px) {
-  .contacts {
+  #buttons {
+    margin-bottom: 12px;
   }
+  .content {
+    margin-top: 15px;
+    margin-bottom: 44px;
+  }
+
   #header-text {
     font-size: 30px;
     font-weight: 500;
     line-height: 30px;
     letter-spacing: 0px;
     text-align: left;
+
+    padding-top: 30px;
   }
 
   #content {
@@ -232,13 +255,17 @@
   .svg {
     width: 24px;
     height: 24px;
+    margin-bottom: 0px;
   }
 
   .button {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    padding: 18px;
+    padding: 9px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 8px;
   }
 
   .button-text {
@@ -251,14 +278,14 @@
   }
 
   .header {
+    margin-top: 20px;
   }
 
   .menu-button {
     line-height: 23px;
   }
 
-  .row {
-  }
+  .row {}
 }
 
 @media (max-width: 900px) {
@@ -288,8 +315,8 @@
 }
 
 @media (max-width: 900px) and (min-width: 640px) {
-  .header {
-  }
+  .header {}
+
   #header-text {
     font-size: 60px;
     font-weight: 500;
@@ -298,18 +325,17 @@
     text-align: left;
   }
 
+  .button {}
+
+  .row {}
+
+  .button-text {}
+}
+
+@media (max-width: 900px) and (min-width: 480px) {
   #dropdown-icon {
     width: 36px;
     height: 28px;
-  }
-
-  .button {
-  }
-
-  .row {
-  }
-
-  .button-text {
   }
 }
 
@@ -321,6 +347,7 @@
 
 @media (max-width: 640px) and (min-width: 480px) {
   .header {
+    margin-top: 50px;
   }
 
   #header-text {
@@ -331,14 +358,11 @@
     text-align: left;
   }
 
-  .button {
-  }
+  .button {}
 
-  .row {
-  }
+  .row {}
 
-  .button-text {
-  }
+  .button-text {}
 }
 
 @media (max-width: 1050px) {
@@ -353,8 +377,8 @@
 }
 
 @media (max-width: 480px) {
-  .line {
-  }
+  .line {}
+
   .row {
     flex-direction: column;
   }
