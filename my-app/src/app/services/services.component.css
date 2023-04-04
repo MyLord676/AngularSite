@@ -6,6 +6,7 @@
 
 #blue {
   color: #364AFA;
+  opacity: 80%;
 }
 
 .side {
@@ -123,6 +124,12 @@
 
   .main {
     margin-bottom: 30px;
+  }
+
+  .list {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
   }
 }
 

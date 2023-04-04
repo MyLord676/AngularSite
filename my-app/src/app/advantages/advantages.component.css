@@ -66,6 +66,7 @@
   line-height: 25px;
   letter-spacing: 0px;
   text-align: left;
+  opacity: 80%;
 }
 
 .logo {
@@ -76,7 +77,6 @@
 .background-image {
   width: 100%;
   background-image: url(/assets/images/advantages.png);
-  background-position-x: 10%;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: initial;
@@ -98,7 +98,7 @@
   background-size: initial;
 
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 
 .noLight {
@@ -177,6 +177,18 @@
   .item {
     flex-direction: column;
     margin-bottom: 0px;
+  }
+
+  .header {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+  }
+
+  .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
   }
 }
 

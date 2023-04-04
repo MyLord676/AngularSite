@@ -44,7 +44,6 @@ export class ServicesComponent {
     this.pageYOffset = window.pageYOffset;
     this.pageXOffset = window.pageXOffset;
     this.offsetTop = this.text.nativeElement.offsetTop;
-    console.log(this.pageYOffset - this.offsetTop);
     this.checkPosition();
   }
 
