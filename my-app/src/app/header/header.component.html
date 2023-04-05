@@ -7,12 +7,12 @@
           <div class="toolbar">
             <img id="istok-logo" alt="Istok Logo" src="assets/images/icons/logo.svg" />
             <div class="menu" *ngIf="screenWidth > 1100;">
-              <a class="menu-button" href="/">О компании</a>
-              <a class="menu-button" href="/">Услуги</a>
-              <a class="menu-button" href="/">Продукты</a>
-              <a class="menu-button" href="/">Карьера</a>
-              <a class="menu-button" href="/">Пресс-центр</a>
-              <a class="menu-button" href="/">Контакты</a>
+              <div class="menu-button" (click)="scrollTo($event)" id="app-about-company">О компании</div>
+              <div class="menu-button" (click)="scrollTo($event)" id="app-services">Услуги</div>
+              <div class="menu-button" (click)="scrollTo($event)" id="app-products">Продукты</div>
+              <div class="menu-button" (click)="scrollTo($event)" id="app-career">Карьера</div>
+              <div class="menu-button" (click)="scrollTo($event)" id="app-press">Пресс-центр</div>
+              <div class="menu-button last" (click)="scrollTo($event)" id="app-footer">Контакты</div>
             </div>
             <img id="dropdown-icon" alt="Istok Logo" src="assets/images/icons/header-dropdown1.svg"
               *ngIf="screenWidth <= 1100;" (click)="dropdownClick($event)" />
@@ -21,12 +21,12 @@
         </div>
         <div class="dropdown" *ngIf="dropDown" [ngStyle]="{'height.px': main.offsetHeight}">
           <div class="drop-menu">
-            <a class="menu-button" href="/">О компании</a>
-            <a class="menu-button" href="/">Услуги</a>
-            <a class="menu-button" href="/">Продукты</a>
-            <a class="menu-button" href="/">Карьера</a>
-            <a class="menu-button" href="/">Пресс-центр</a>
-            <a class="menu-button" href="/">Контакты</a>
+            <div class="menu-button" (click)="scrollTo($event)" id="app-about-company">О компании</div>
+            <div class="menu-button" (click)="scrollTo($event)" id="app-services">Услуги</div>
+            <div class="menu-button" (click)="scrollTo($event)" id="app-products">Продукты</div>
+            <div class="menu-button" (click)="scrollTo($event)" id="app-career">Карьера</div>
+            <div class="menu-button" (click)="scrollTo($event)" id="app-press">Пресс-центр</div>
+            <div class="menu-button" (click)="scrollTo($event)" id="app-footer">Контакты</div>
           </div>
           <div class="contacts">
             <div class="contacts-header menu-button">Контакты</div>
@@ -41,8 +41,9 @@
             <div>информационных</div>
             <div>систем</div>
           </div>
-          <div class="content" [ngClass]="{'noOpacity': dropDown}">Весь спектр цифровых решений и услуг
-            для максимизации эффективности бизнеса
+          <div class="content" [ngClass]="{'noOpacity': dropDown}"> 
+            <div>Весь спектр цифровых решений и услуг</div>
+            <div>для максимизации эффективности бизнеса</div>
           </div>
           <div id="buttons">
             <div class="row">

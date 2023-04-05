@@ -10,6 +10,7 @@
   user-select: none;
   height: 60px;
   width: 131px;
+  /*margin-right: auto;*/
 }
 
 .toolbar .menu {
@@ -34,6 +35,8 @@
   opacity: 80%;
 
   margin-bottom: 24px;
+
+  cursor: pointer;
 }
 
 .wrapper {
@@ -60,7 +63,7 @@
   color: white;
   opacity: 80%;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 169px;
 }
 
 #buttons {
@@ -68,6 +71,7 @@
   justify-content: space-between;
   color: white;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .button {
@@ -207,6 +211,10 @@
   top: 60%;
 }
 
+.last {
+  margin-left: 160px;
+}
+
 @media (min-width: 480px) {
   .menu-button {
     line-height: 23px;
@@ -218,11 +226,14 @@
 @media (max-width: 480px) {
   #buttons {
     margin-bottom: 12px;
+    margin-bottom: 0px;
   }
 
   .content {
     margin-top: 15px;
     margin-bottom: 44px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   #header-text {
@@ -290,9 +301,7 @@
     margin-bottom: 14px;
   }
 
-  .drop-menu {
-    
-  }
+  .drop-menu {}
 
   .row {}
 }
@@ -327,11 +336,9 @@
   .header {}
 
   #header-text {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 500;
-    line-height: 60px;
-    letter-spacing: 0px;
-    text-align: left;
+    line-height: 64px;
   }
 
   .button {}
@@ -363,8 +370,14 @@
     font-size: 48px;
     font-weight: 500;
     line-height: 48px;
-    letter-spacing: 0px;
-    text-align: left;
+  }
+
+  #buttons {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    margin-bottom: 100px;
   }
 
   .button {}
@@ -390,5 +403,11 @@
 
   .row {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1300px) {
+  .last {
+    margin-left: auto;
   }
 }

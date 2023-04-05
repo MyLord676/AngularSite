@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
 import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
@@ -11,6 +11,8 @@ export class HeaderComponent {
   public screenWidth: number;
   public screenHeight: number;
   @ViewChild("main")main!: ElementRef<HTMLDivElement>;
+
+  /*@Output() scrollToEvent = new EventEmitter<Event>();*/
 
   constructor() {
     this.screenWidth = window.innerWidth;
@@ -31,5 +33,9 @@ export class HeaderComponent {
     this.dropDown = !this.dropDown;
     if (this.screenWidth > 1100)
       this.dropDown = false;
+  }
+
+  scrollTo(event: Event) {
+    document.getElementsByTagName((event.target as HTMLDivElement).id)[0].scrollIntoView();
   }
 }

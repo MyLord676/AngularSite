@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { environment } from '../environments/environment';
 
 
@@ -16,4 +16,8 @@ export class AppComponent {
   rotationAngle = -Math.PI / 2;
   circleListIcons = ["assets/images/icons/circle-list-icon1.svg", "assets/images/icons/circle-list-icon2.svg", "assets/images/icons/circle-list-icon3.svg", "assets/images/icons/circle-list-icon5.svg", "assets/images/icons/circle-list-icon6.svg", "assets/images/icons/circle-list-icon7.svg", "assets/images/icons/circle-list-icon8.svg", "assets/images/icons/circle-list-icon9.svg"];
   text = ["Военно-промышленный комплекс", "Государственный сектор", "Нефтегазовый сектор", "Торговля и сфера услуг", "Телекоммуникации и связь", "Транспорт и логистика", "Финансы и страхование", "Энергетика, Строительство и ЖКХ"];
+
+  /*scrollTo(event: Event) {
+    console.log((event.target as HTMLDivElement).id);
+  }*/
 }
