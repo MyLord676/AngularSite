@@ -4,6 +4,7 @@
     width: 100%;
     margin-bottom: 100px;
     margin-top: 100px;
+    color: #061034;
 }
 
 .pair {
@@ -40,6 +41,7 @@
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0px;
+    opacity: 80%;
 }
 
 .border {

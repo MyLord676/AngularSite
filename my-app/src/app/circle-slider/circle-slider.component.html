@@ -35,7 +35,7 @@
             class="dot" (click)="selectImage(i)" alt="Svg" [style.width.px]="iconWidth" [style.height.px]="iconHeight">
     </div>
 </div>
-<div *ngIf="screenWidth < 640" class="buttons">
+<div *ngIf="screenWidth <= 640" class="buttons">
     <hr class="line">
     <div *ngFor="let icon of iconsList; let i = index" (click)="selectImage(i)">
         <div class="button">
