@@ -2,18 +2,15 @@ footer {
   width: 100%;
   margin: 0px auto 80px;
 }
-
 #footer-menu {
   display: flex;
   justify-content: space-between;
   margin: 61px 0px;
 }
-
 .footer-topic {
   max-width: 30%;
   color: white;
 }
-
 .footer-header {
   font-size: 18px;
   font-weight: 500;
@@ -22,12 +19,10 @@ footer {
   text-align: left;
   margin-bottom: 18px;
 }
-
 .footer-block {
   display: flex;
   flex-direction: column;
 }
-
 .footer-text {
   font-size: 18px;
   font-weight: 400;
@@ -37,13 +32,11 @@ footer {
   opacity: 80%;
   margin-bottom: 8px;
 }
-
 #footer-istok-logo {
   user-select: none;
   height: 91px;
   width: 192px;
 }
-
 #footer-policy {
   display: flex;
   justify-content: space-between;
@@ -54,7 +47,6 @@ footer {
   letter-spacing: 0px;
   text-align: left;
 }
-
 #tell-wrapper {
   width: 50%;
   display: flex;
@@ -62,30 +54,25 @@ footer {
   margin-top: 80px;
   margin-bottom: 80px;
 }
-
 #tell-us-main {
   width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
 }
-
 #header {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
 }
-
 #contacts {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 .inputs::placeholder {
   color: #8D93A3;
 }
-
 .inputs {
   height: 60px;
   margin-top: 24px;
@@ -100,7 +87,6 @@ footer {
   letter-spacing: 0px;
   text-align: left;
 }
-
 .checkbox-agreement {
   color: #8D93A3;
   cursor: pointer;
