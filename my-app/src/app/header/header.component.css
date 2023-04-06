@@ -166,7 +166,7 @@
 }
 
 .header {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 #dropdown-icon {
@@ -362,10 +362,6 @@
 }
 
 @media (max-width: 640px) and (min-width: 480px) {
-  .header {
-    margin-top: 50px;
-  }
-
   #header-text {
     font-size: 48px;
     font-weight: 500;
