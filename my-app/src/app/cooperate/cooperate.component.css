@@ -43,15 +43,18 @@
   line-height: 25px;
   letter-spacing: 0px;
   text-align: left;
-  color:#061034;
+  color: #061034;
   opacity: 80%;
 }
 
 .company {
-  padding: 30px 50px;
+  padding: 37px 50px;
   background: #F0F6FA;
   border-radius: 8px;
   margin-bottom: 25px;
+
+  display: flex;
+  justify-content: center;
 }
 
 .svg {

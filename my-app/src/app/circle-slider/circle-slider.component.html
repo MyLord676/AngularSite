@@ -1,6 +1,9 @@
 <div class="header">
     <div class="block left">Ключевые отрасли</div>
-    <div class="block right">Предоставляем спектр ИТ-решений и услуг для всех отраслей экономики.</div>
+    <div class="block right">
+        <div>Предоставляем спектр ИТ-решений и услуг для всех </div>
+        <div>отраслей экономики.</div>
+    </div>
 </div>
 <div class="slider" (resized)="onResized($event)" #slider>
     <img *ngFor="let image of images; let i = index" [src]="image" [ngClass]="{'image-active': selectedImage === i}"

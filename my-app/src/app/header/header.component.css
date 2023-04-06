@@ -8,8 +8,8 @@
 
 .toolbar #istok-logo {
   user-select: none;
-  height: 60px;
-  width: 131px;
+  width: 97px;
+  height: 46px;
   /*margin-right: auto;*/
 }
 
@@ -285,8 +285,8 @@
   }
 
   .toolbar #istok-logo {
-    user-select: none;
     width: 66px;
+    height: 31px;
   }
 
   .header {
