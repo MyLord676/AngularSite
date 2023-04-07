@@ -17,7 +17,7 @@
                 fill="#282828" />
         </svg>
 
-        <svg [attr.width]="width" [attr.height]="600" [attr.viewBox]="viewBox" class="circle" fill="none"
+        <svg [attr.width]="width" [attr.viewBox]="viewBox" class="circle" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <circle [attr.cx]="cx" [attr.cy]="cy" [attr.r]="radius" stroke="#8D93A3" #circle />
         </svg>
@@ -37,10 +37,9 @@
 </div>
 <div *ngIf="screenWidth <= 640" class="buttons">
     <hr class="line">
-    <div *ngFor="let icon of iconsList; let i = index" (click)="selectImage(i)" class="cursor">
+    <div *ngFor="let icon of iconsList; let i = index" class="cursor" (click)="selectImage(i)">
         <div class="button">
-            <img [src]="icon" class="logo" alt="Svg"
-                [ngClass]="{'icon-active': selectedImage === i}">
+            <img [src]="icon" class="logo" alt="Svg">
             <div class="button-text">{{text[i]}}</div>
         </div>
         <hr class="line">

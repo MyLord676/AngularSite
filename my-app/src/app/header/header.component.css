@@ -412,6 +412,11 @@
   .row {
     flex-direction: column;
   }
+
+  #dropdown-icon {
+    width: 26px;
+    height: 18px;
+  }
 }
 
 @media (max-width: 1300px) {

@@ -14,10 +14,6 @@ export class AppComponent {
   circleSliderIcons = ["assets/images/icons/circle-icon1.svg", "assets/images/icons/circle-icon2.svg", "assets/images/icons/circle-icon3.svg", "assets/images/icons/circle-icon4.svg", "assets/images/icons/circle-icon5.svg", "assets/images/icons/circle-icon6.svg", "assets/images/icons/circle-icon7.svg", "assets/images/icons/circle-icon8.svg"];
   circleSliderSelectedIcons = ["assets/images/icons/circle-selected-icon1.svg", "assets/images/icons/circle-selected-icon2.svg", "assets/images/icons/circle-selected-icon3.svg", "assets/images/icons/circle-selected-icon4.svg", "assets/images/icons/circle-selected-icon5.svg", "assets/images/icons/circle-selected-icon6.svg", "assets/images/icons/circle-selected-icon7.svg", "assets/images/icons/circle-selected-icon8.svg"];
   rotationAngle = -Math.PI / 2;
-  circleListIcons = ["assets/images/icons/circle-list-icon1.svg", "assets/images/icons/circle-list-icon2.svg", "assets/images/icons/circle-list-icon3.svg", "assets/images/icons/circle-list-icon5.svg", "assets/images/icons/circle-list-icon6.svg", "assets/images/icons/circle-list-icon7.svg", "assets/images/icons/circle-list-icon8.svg", "assets/images/icons/circle-list-icon9.svg"];
-  text = ["Военно-промышленный комплекс", "Государственный сектор", "Нефтегазовый сектор", "Торговля и сфера услуг", "Телекоммуникации и связь", "Транспорт и логистика", "Финансы и страхование", "Энергетика, Строительство и ЖКХ"];
-
-  /*scrollTo(event: Event) {
-    console.log((event.target as HTMLDivElement).id);
-  }*/
+  circleListIcons = ["assets/images/icons/circle-list-icon1.svg", "assets/images/icons/circle-list-icon2.svg", "assets/images/icons/circle-list-icon3.svg", "assets/images/icons/circle-list-icon5.svg", "assets/images/icons/circle-list-icon7.svg", "assets/images/icons/circle-list-icon6.svg", "assets/images/icons/circle-list-icon8.svg", "assets/images/icons/circle-list-icon9.svg"];
+  text = ["Военно-промышленный комплекс", "Государственный сектор", "Нефтегазовый сектор", "Торговля и сфера услуг", "Транспорт и логистика", "Телекоммуникации и связь", "Финансы и страхование", "Энергетика, Строительство и ЖКХ"];
 }
