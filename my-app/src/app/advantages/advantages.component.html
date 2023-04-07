@@ -1,7 +1,7 @@
-<div class="background-image" #image [style.background-position-x.px]="(screenWidth / 2) - (wrapperWidth / 2) - 20" [ngStyle]="(screenWidth < 1450) ? {'background-position-y.px': image.offsetHeight - 180} : {}">
+<div class="background-image" #image [style.background-position]="imagePosition" [style.background-image]="imageUrl">
   <div class="background-light1" [ngClass]="{'noLight': screenWidth < 1450}">
     <div class="background-light2" [ngClass]="{'noLight': screenWidth < 1450}">
-      <div id="content" #content (resized)="onResized($event)">
+      <div id="content" #content>
         <div id="text" #text>
           <div id="collumns">
             <div id="collumn-header">Преимущества</div>
