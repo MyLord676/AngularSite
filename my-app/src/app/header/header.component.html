@@ -1,7 +1,7 @@
-<div class="background-image" [ngClass]="{'noImage': dropDown}"
-  [ngStyle]="{'background-position-x.px': screenWidth / 2 - 161}">
-  <div class="background-light1" [ngClass]="{'noImage': dropDown}">
-    <div class="background-light2" [ngClass]="{'noImage': dropDown}">
+<div class="background-image" [style.background-image]="(!dropDown) ? (imageUrl) : ('none')"
+  [ngStyle]="{'background-position-x': imagePosition}">
+  <div class="background-light1" [ngClass]="{'noImage': dropDown || screenWidth <= 480}">
+    <div class="background-light2" [ngClass]="{'noImage': dropDown || screenWidth <= 800}">
       <div class="wrapper">
         <div class="header">
           <div class="toolbar">
@@ -14,12 +14,12 @@
               <div class="menu-button" (click)="scrollTo($event)" id="app-press">Пресс-центр</div>
               <div class="menu-button last" (click)="scrollTo($event)" id="app-footer">Контакты</div>
             </div>
-            <img id="dropdown-icon" alt="Istok Logo" src="assets/images/icons/header-dropdown1.svg"
-              *ngIf="screenWidth <= 1100;" (click)="dropdownClick($event)" />
+            <img id="dropdown-icon" alt="Istok Logo" *ngIf="screenWidth <= 1100;" (click)="dropdownClick($event)"
+              [src]="(!dropDown) ? ('assets/images/icons/header-dropdown1.svg') : ('assets/images/icons/header-dropdown2.svg')" />
           </div>
-          <hr class="hide noMargin" [ngClass]="{'line': dropDown}">
         </div>
         <div class="dropdown" *ngIf="dropDown" [ngStyle]="{'height.px': main.offsetHeight}">
+          <hr class="hide noMargin" [ngClass]="{'line': dropDown}">
           <div class="drop-menu">
             <div class="menu-button" (click)="scrollTo($event)" id="app-about-company">О компании</div>
             <div class="menu-button" (click)="scrollTo($event)" id="app-services">Услуги</div>
@@ -41,7 +41,7 @@
             <div>информационных</div>
             <div>систем</div>
           </div>
-          <div class="content" [ngClass]="{'noOpacity': dropDown}"> 
+          <div class="content" [ngClass]="{'noOpacity': dropDown}">
             <div>Весь спектр цифровых решений и услуг</div>
             <div>для максимизации эффективности бизнеса</div>
           </div>
