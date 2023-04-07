@@ -1,5 +1,6 @@
-<div id="background-image" [ngStyle]="{'background-position-x.px': screenWidth / 2 }">
-  <div id="background-light">
+<div class="background-image" [style.background-image]="imageUrl"
+  [ngStyle]="{'background-position': imagePosition }">
+  <div class="background-light" [ngClass]="{'noLight': screenWidth < 800}">
     <div id="wrapper" (resized)="onResized($event)">
       <div id="tell-wrapper">
         <div id="tell-us-main">
